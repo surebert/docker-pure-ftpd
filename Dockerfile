@@ -6,12 +6,12 @@ MAINTAINER Andrew Stilliard <andrew.stilliard@gmail.com>
 
 # properly setup debian sources
 ENV DEBIAN_FRONTEND noninteractive
-RUN echo "deb http://http.debian.net/debian jessie main\n\
-deb-src http://http.debian.net/debian jessie main\n\
-deb http://http.debian.net/debian jessie-updates main\n\
-deb-src http://http.debian.net/debian jessie-updates main\n\
-deb http://security.debian.org jessie/updates main\n\
-deb-src http://security.debian.org jessie/updates main\n\
+RUN echo "deb https://http.debian.net/debian jessie main\n\
+deb-src https://http.debian.net/debian jessie main\n\
+deb https://http.debian.net/debian jessie-updates main\n\
+deb-src https://http.debian.net/debian jessie-updates main\n\
+deb https://security.debian.org jessie/updates main\n\
+deb-src https://security.debian.org jessie/updates main\n\
 " > /etc/apt/sources.list
 RUN apt-get -y update
 
